@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Buying a low-priced product on the Exito website" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T15:10:51" hostname="DESKTOP-28KFMUL" time="53.692">
+<testsuite name="Buying a low-priced product on the Exito website" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T17:13:27" hostname="DESKTOP-28KFMUL" time="44.667">
   <properties/>
-  <testcase name="Logging in to the Exito website" classname="Buying a low-priced product on the Exito website" time="53.692"/>
+  <testcase name="Logging in to the Exito website" classname="Buying a low-priced product on the Exito website" time="44.667"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 44137
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 19559
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 30, 2023 10:10:57 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 30, 2023 12:13:33 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-mar. 30, 2023 10:10:58 A. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+mar. 30, 2023 12:13:33 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 7071
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 33866
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 30, 2023 10:11:04 A. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+mar. 30, 2023 12:13:39 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
