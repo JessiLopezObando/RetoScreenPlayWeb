@@ -20,4 +20,11 @@ public class PaginaIniciarSesion {
     public static final Target BOTON_ENTRAR = Target.the("Boton Entrar")
             .located(By.cssSelector("button[type='submit'] div[class='vtex-button__label flex items-center justify-center h-100 ph5 ']"));
 
+    public static final Target MESSAGE_HOLA = Target.the("Mensaje Hola de inicio de Sesion")
+            .located(By.cssSelector(".exito-login-4-x-greetingsText.ml2"));
+
+
+
+
+
 }
