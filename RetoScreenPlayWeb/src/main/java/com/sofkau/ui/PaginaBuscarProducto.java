@@ -23,10 +23,4 @@ public class PaginaBuscarProducto {
     public static final Target OPTION_COMPRA_Y_RECOGE = Target.the("Opcion enviar otra direccion")
             .located(By.xpath("(//button[@class='exito-geolocation-3-x-active'])[1]"));
 
-
-    public static final Target ORDENAR_PRECIO = Target.the("Ordenar Precio")
-            .located(By.xpath("(//button[@class='exito-geolocation-3-x-inactive'])[1]"));
-
-
-
 }

@@ -9,8 +9,7 @@ import org.openqa.selenium.Keys;
 
 import static com.sofkau.ui.PaginaBuscarProducto.*;
 import static com.sofkau.ui.PaginaBuscarProducto.OPTION_COMPRA_Y_RECOGE;
-import static com.sofkau.ui.PaginaDireccion.CAMPO_CIUDAD;
-import static com.sofkau.ui.PaginaDireccion.OPTION_CIUDAD;
+import static com.sofkau.ui.PaginaDireccion.*;
 
 
 public class DireccionEnvio implements Task {
@@ -32,7 +31,11 @@ public class DireccionEnvio implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(OPTION_CIUDAD),
-                Hit.the(Keys.ENTER).into(OPTION_CIUDAD)
+                Hit.the(Keys.ENTER).into(OPTION_CIUDAD),
+                Click.on(OPTION_TIENDA),
+                Hit.the(Keys.ENTER).into(OPTION_TIENDA),
+                Click.on(BOTON_CONFIRMAR),
+                Click.on(BOTON_SALIR)
         );
     }
 

@@ -16,6 +16,7 @@ import java.util.List;
 import static com.sofkau.tasks.BuscarProducto.buscarProducto;
 import static com.sofkau.tasks.DireccionEnvio.direccionEnvio;
 import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
+import static com.sofkau.tasks.Seleccionar.seleccionar;
 import static com.sofkau.ui.PaginaIniciarSesion.MESSAGE_HOLA;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -57,9 +58,12 @@ public class ComprarProductoStepDefinition extends Configuracion {
 
         theActorInTheSpotlight().attemptsTo(
                 direccionEnvio()
-                        .laCiudad("Armenia")
+
         );
 
+        theActorInTheSpotlight().attemptsTo(
+                seleccionar()
+        );
     }
 
     @When("I proceed to checkout and enter my information")

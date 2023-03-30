@@ -8,7 +8,15 @@ public class PaginaDireccion {
     public static final Target OPTION_CIUDAD = Target.the("Opcion Ciudad")
             .located(By.xpath("//input[@aria-autocomplete='list']"));
 
-    public static final Target CAMPO_CIUDAD = Target.the("Opcion Ciudad")
-            .located(By.xpath("(//input[@id='react-select-input-f4db7d4f-ab75-4d11-93e9-a1bf95cae513'])[1]"));
+    public static final Target OPTION_TIENDA = Target.the("Boton seleccionar tienda")
+            .located(By.xpath("(//input[@type='text' and @aria-autocomplete='list'])[2]"));
+
+    public static final Target BOTON_CONFIRMAR = Target.the("Boton seleccionar tienda")
+            .located(By.xpath("//button[normalize-space()='Confirmar']"));
+
+    public static final Target BOTON_SALIR = Target.the("Boton Salir")
+            .located(By.xpath("//*[name()='path' and contains(@data-name,'Path 373')]"));
+
+
 
 }
