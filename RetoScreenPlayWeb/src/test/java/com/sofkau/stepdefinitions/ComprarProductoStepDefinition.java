@@ -117,7 +117,6 @@ public class ComprarProductoStepDefinition extends Configuracion {
 
         try {
 
-
             String expectedMessage = "Con el Pago contra entrega podr\u00E1s pagar en efectivo, con tarjeta d\u00E9bito o cr\u00E9dito al momento de la recepci\u00F3n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.";
             String actualMessage = Text.of(MENSAJE).viewedBy(theActorInTheSpotlight()).asString();
             LOGGER.info("Actual message: " + actualMessage);
