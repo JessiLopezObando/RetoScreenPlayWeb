@@ -7,12 +7,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
+import net.serenitybdd.screenplay.questions.Text;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 
 import java.io.IOException;
 import java.util.List;
 
-import static com.sofkau.questions.ConfirmacionCompra.confirmacionCompra;
+
 import static com.sofkau.tasks.BuscarProducto.buscarProducto;
 import static com.sofkau.tasks.Carrito.carrito;
 import static com.sofkau.tasks.DireccionEnvio.direccionEnvio;
@@ -21,9 +24,10 @@ import static com.sofkau.tasks.IniciarSesion.iniciarSesion;
 import static com.sofkau.tasks.LlenarDatosComprador.llenarDatosComprador;
 import static com.sofkau.tasks.MetodoPago.metodoPago;
 import static com.sofkau.tasks.Seleccionar.seleccionar;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static com.sofkau.ui.PaginaMetodoPago.MENSAJE;
+
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static org.hamcrest.core.IsEqual.equalTo;
+
 
 public class ComprarProductoStepDefinition extends Configuracion {
 
@@ -112,11 +116,14 @@ public class ComprarProductoStepDefinition extends Configuracion {
     public void iShouldSeeAConfirmationMessageIndicatingASuccessfulPurchase() {
 
         try {
-            theActorInTheSpotlight().should(
-                    seeThat(confirmacionCompra(),equalTo("Con el Pago contra entrega podr\u00E1s pagar en efectivo, con tarjeta d\u00E9bito o cr\u00E9dito al momento de la recepci\u00F3n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago."))
-            );
 
-            LOGGER.info("La prueba ha pasado. Se encontro el mensaje esperado: " + confirmacionCompra());
+
+            String expectedMessage = "Con el Pago contra entrega podr\u00E1s pagar en efectivo, con tarjeta d\u00E9bito o cr\u00E9dito al momento de la recepci\u00F3n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.";
+            String actualMessage = Text.of(MENSAJE).viewedBy(theActorInTheSpotlight()).asString();
+            LOGGER.info("Actual message: " + actualMessage);
+            Assert.assertEquals(expectedMessage, actualMessage);
+            LOGGER.info("La prueba ha pasado. Se encontro el mensaje esperado: " + actualMessage);
+
 
         } catch (AssertionError e) {
             LOGGER.error("La prueba fallo. Error: " + e.getMessage());
