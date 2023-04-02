@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Buying a low-priced product on the Exito website" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-30T21:45:37" hostname="DESKTOP-28KFMUL" time="123.697">
+<testsuite name="Buying a low-priced product on the Exito website" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-04-02T04:43:03" hostname="DESKTOP-28KFMUL" time="122.478">
   <properties/>
-  <testcase name="Buying a low-priced product on the Exito website" classname="Buying a low-priced product on the Exito website" time="123.697"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 37199
+  <testcase name="Buying a low-priced product on the Exito website" classname="Buying a low-priced product on the Exito website" time="122.478">
+    <failure message="java.lang.AssertionError: &#10;Expected: &quot;Con el Pago contra entrega podrÃ¡s pagar en efectivo, con tarjeta dÃ©bito o crÃ©dito al momento de la recepciÃ³n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.&quot;&#10;     but: was &quot;Con el Pago contra entrega podrás pagar en efectivo, con tarjeta débito o crédito al momento de la recepción de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: &quot;Con el Pago contra entrega podrÃ¡s pagar en efectivo, con tarjeta dÃ©bito o crÃ©dito al momento de la recepciÃ³n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.&quot;
+     but: was &quot;Con el Pago contra entrega podrás pagar en efectivo, con tarjeta débito o crédito al momento de la recepción de tu pedido. El titular de la tarjeta debe estar presente al momento del pago.&quot;
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
+	at com.sofkau.stepdefinitions.ComprarProductoStepDefinition.iShouldSeeAConfirmationMessageIndicatingASuccessfulPurchase(ComprarProductoStepDefinition.java:118)
+	at ✽.I should see a confirmation message indicating a successful purchase.(file:///D:/SOFKA/RETO/RetoScreenPlayWeb/RetoScreenPlayWeb/src/test/resources/features/comprarProducto.feature:12)
+</failure>
+  </testcase>
+  <system-out><![CDATA[2023-04-01 23:43:28 INFO  ComprarProductoStepDefinition:49 El actor ha accedido a la pagina web del Exito.
+2023-04-01 23:43:44 INFO  ComprarProductoStepDefinition:65 El usuario ha iniciado sesiÃ³n con exito.
+2023-04-01 23:44:35 INFO  ComprarProductoStepDefinition:83 El producto de bajo precio ha sido agregado al carrito exitosamente.
+2023-04-01 23:45:00 INFO  ComprarProductoStepDefinition:106 Se han ingresado los datos del comprador y se ha finalizado la compra.
+2023-04-01 23:45:05 ERROR ComprarProductoStepDefinition:125 La prueba fallo. Error: 
+Expected: "Con el Pago contra entrega podrÃ¡s pagar en efectivo, con tarjeta dÃ©bito o crÃ©dito al momento de la recepciÃ³n de tu pedido. El titular de la tarjeta debe estar presente al momento del pago."
+     but: was "Con el Pago contra entrega podrás pagar en efectivo, con tarjeta débito o crédito al momento de la recepción de tu pedido. El titular de la tarjeta debe estar presente al momento del pago."
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 7108
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 30, 2023 4:45:43 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-mar. 30, 2023 4:45:43 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
-INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 10872
+abr. 01, 2023 11:43:09 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+abr. 01, 2023 11:43:09 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 8420
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mar. 30, 2023 4:45:48 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
+abr. 01, 2023 11:43:14 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

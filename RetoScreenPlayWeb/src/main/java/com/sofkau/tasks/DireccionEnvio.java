@@ -5,11 +5,14 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Hit;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
 
 import static com.sofkau.ui.PaginaBuscarProducto.*;
 import static com.sofkau.ui.PaginaBuscarProducto.OPTION_COMPRA_Y_RECOGE;
 import static com.sofkau.ui.PaginaDireccion.*;
+import static com.sofkau.ui.PaginaSeleccionar.AGREGAR;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
 
 public class DireccionEnvio implements Task {
@@ -35,6 +38,7 @@ public class DireccionEnvio implements Task {
                 Click.on(OPTION_TIENDA),
                 Hit.the(Keys.ENTER).into(OPTION_TIENDA),
                 Click.on(BOTON_CONFIRMAR),
+                WaitUntil.the(BOTON_SALIR,isClickable()),
                 Click.on(BOTON_SALIR)
         );
     }

@@ -19,8 +19,8 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 
 public class Configuracion {
     private static final String SWITCHES = "--remote-allow-origins=*";
-    private static final String ACTOR = "Jessica";
-    private static final int DIEZ_SEGUNDOS = 10;
+    protected static final String ACTOR = "Jessica";
+    private static final int VEINTE_SEGUNDOS = 20;
 
     @Managed()
     protected WebDriver webDriver;
@@ -57,7 +57,7 @@ public class Configuracion {
     }
 
     public static void waitExplicit() {
-        WebDriverWait wait = new WebDriverWait(getDriver(), DIEZ_SEGUNDOS);
+        WebDriverWait wait = new WebDriverWait(getDriver(), VEINTE_SEGUNDOS);
         wait.until(ExpectedConditions.alertIsPresent());
     }
 
